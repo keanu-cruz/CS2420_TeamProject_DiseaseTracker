@@ -1,4 +1,4 @@
 # CS2420 Capstone Project - Disease Tracker
-** Contributing Members: **
+**Contributing Members:**
 * Keanu Cruz
 * Caliana Caldwell
