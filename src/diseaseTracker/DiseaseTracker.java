@@ -1,6 +1,6 @@
 package diseaseTracker;
 
-public class MainApp {
+public class DiseaseTracker {
 	public static void main(String[] args) {
 		
 	}
