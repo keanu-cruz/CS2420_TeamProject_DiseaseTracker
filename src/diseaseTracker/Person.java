@@ -36,6 +36,7 @@ public class Person {
 	public void infect() {
 		if (!vaccinated) {
 			status = InfectionStatus.INFECTED;
+			daysInfected = 0;
 		}
 	}
 
