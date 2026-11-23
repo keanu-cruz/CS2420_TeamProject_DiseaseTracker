@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="926.0" prefWidth="894.0" styleClass="main-box" stylesheets="@application.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="diseaseTracker.DiseaseTrackerController">
+	<children>
+		<BorderPane fx:id="titleStatsBoard" prefHeight="200.0" prefWidth="200.0">
+			<top>
+				<BorderPane fx:id="titleContainer" BorderPane.alignment="CENTER">
+					<center>
+						<Label styleClass="white-text" text="Outbreak Tracker" BorderPane.alignment="CENTER">
+							<font>
+								<Font size="48.0" />
+							</font>
+							<padding>
+								<Insets top="10.0" />
+							</padding>
+						</Label>
+					</center>
+					<bottom>
+						<Label styleClass="white-text" text="Disease and Transmission Monitoring Simulator" BorderPane.alignment="CENTER">
+							<padding>
+								<Insets bottom="20.0" />
+							</padding>
+							<font>
+								<Font size="18.0" />
+							</font>
+						</Label>
+					</bottom>
+				</BorderPane>
+			</top>
+			<bottom>
+				<BorderPane fx:id="statsContainer" prefHeight="186.0" prefWidth="892.0" styleClass="stats" BorderPane.alignment="CENTER">
+					<center>
+						<GridPane fx:id="statsGrid" hgap="20.0" prefHeight="90.0" prefWidth="347.0" styleClass="grid" BorderPane.alignment="CENTER">
+							<columnConstraints>
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+								<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+							</columnConstraints>
+							<rowConstraints>
+								<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+							</rowConstraints>
+							<padding>
+								<Insets left="5.0" right="5.0" />
+							</padding>
+							<children>
+								<BorderPane fx:id="statBox1" prefHeight="200.0" prefWidth="200.0" styleClass="stats-box">
+									<bottom>
+										<Label text="Susceptible" BorderPane.alignment="CENTER">
+											<font>
+												<Font size="18.0" />
+											</font>
+											<BorderPane.margin>
+												<Insets bottom="20.0" />
+											</BorderPane.margin>
+										</Label>
+									</bottom>
+									<center>
+										<Label text="100" textFill="#46afff" BorderPane.alignment="CENTER">
+											<font>
+												<Font size="36.0" />
+											</font>
+											<BorderPane.margin>
+												<Insets />
+											</BorderPane.margin>
+										</Label>
+									</center>
+									<opaqueInsets>
+										<Insets />
+									</opaqueInsets>
+									<GridPane.margin>
+										<Insets />
+									</GridPane.margin>
+									<padding>
+										<Insets top="10.0" />
+									</padding>
+								</BorderPane>
+								<BorderPane fx:id="statBox2" prefHeight="200.0" prefWidth="200.0" styleClass="stats-box" GridPane.columnIndex="1">
+									<center>
+										<Label text="10" textFill="#ff3a3a" BorderPane.alignment="CENTER">
+											<font>
+												<Font size="36.0" />
+											</font>
+											<BorderPane.margin>
+												<Insets />
+											</BorderPane.margin>
+										</Label>
+									</center>
+									<bottom>
+										<Label text="Infected" BorderPane.alignment="CENTER">
+											<font>
+												<Font size="18.0" />
+											</font>
+											<BorderPane.margin>
+												<Insets bottom="20.0" />
+											</BorderPane.margin>
+										</Label>
+									</bottom>
+									<opaqueInsets>
+										<Insets />
+									</opaqueInsets>
+									<GridPane.margin>
+										<Insets />
+									</GridPane.margin>
+									<padding>
+										<Insets top="10.0" />
+									</padding>
+								</BorderPane>
+								<BorderPane fx:id="statBox3" prefHeight="200.0" prefWidth="200.0" styleClass="stats-box" GridPane.columnIndex="2">
+									<center>
+										<Label text="20" textFill="#4cff49" BorderPane.alignment="CENTER">
+											<font>
+												<Font size="36.0" />
+											</font>
+											<BorderPane.margin>
+												<Insets />
+											</BorderPane.margin>
+										</Label>
+									</center>
+									<bottom>
+										<Label text="Vaccinated" BorderPane.alignment="CENTER">
+											<font>
+												<Font size="18.0" />
+											</font>
+											<BorderPane.margin>
+												<Insets bottom="20.0" />
+											</BorderPane.margin>
+										</Label>
+									</bottom>
+									<opaqueInsets>
+										<Insets />
+									</opaqueInsets>
+									<GridPane.margin>
+										<Insets />
+									</GridPane.margin>
+									<padding>
+										<Insets top="10.0" />
+									</padding>
+								</BorderPane>
+								<BorderPane fx:id="statBox4" prefHeight="200.0" prefWidth="200.0" styleClass="stats-box" GridPane.columnIndex="3">
+									<center>
+										<Label text="15" textFill="#ff8104" BorderPane.alignment="CENTER">
+											<font>
+												<Font size="36.0" />
+											</font>
+											<BorderPane.margin>
+												<Insets />
+											</BorderPane.margin>
+										</Label>
+									</center>
+									<bottom>
+										<Label text="Recovered" BorderPane.alignment="CENTER">
+											<font>
+												<Font size="18.0" />
+											</font>
+											<BorderPane.margin>
+												<Insets bottom="20.0" />
+											</BorderPane.margin>
+										</Label>
+									</bottom>
+									<opaqueInsets>
+										<Insets />
+									</opaqueInsets>
+									<GridPane.margin>
+										<Insets />
+									</GridPane.margin>
+									<padding>
+										<Insets top="10.0" />
+									</padding>
+								</BorderPane>
+							</children>
+							<BorderPane.margin>
+								<Insets left="20.0" right="20.0" />
+							</BorderPane.margin>
+						</GridPane>
+					</center>
+					<top>
+						<BorderPane fx:id="statsTitle" prefHeight="52.0" prefWidth="892.0" BorderPane.alignment="CENTER">
+							<left>
+								<Label styleClass="white-text" text="Stats Dashboard" BorderPane.alignment="CENTER">
+									<font>
+										<Font size="22.0" />
+									</font>
+								</Label>
+							</left>
+							<padding>
+								<Insets left="20.0" />
+							</padding>
+						</BorderPane>
+					</top>
+					<bottom>
+						<AnchorPane prefHeight="15.0" prefWidth="894.0" BorderPane.alignment="CENTER">
+							<padding>
+								<Insets bottom="20.0" />
+							</padding>
+						</AnchorPane>
+					</bottom>
+				</BorderPane>
+			</bottom>
+		</BorderPane>
+		<BorderPane fx:id="graphSection" prefHeight="418.0" prefWidth="894.0">
+			<center>
+				<AnchorPane prefHeight="281.0" prefWidth="894.0" BorderPane.alignment="CENTER" />
+			</center>
+			<top>
+				<Label styleClass="white-text" text="Day 0" BorderPane.alignment="CENTER_LEFT">
+					<padding>
+						<Insets left="20.0" top="10.0" />
+					</padding>
+					<font>
+						<Font size="22.0" />
+					</font>
+				</Label>
+			</top>
+		</BorderPane>
+		<BorderPane fx:id="controlsSection" prefHeight="173.0" prefWidth="894.0">
+			<top>
+				<Label alignment="CENTER" styleClass="white-text" text="Starting Conditions" BorderPane.alignment="CENTER_LEFT">
+					<padding>
+						<Insets bottom="20.0" left="20.0" />
+					</padding>
+					<font>
+						<Font size="22.0" />
+					</font>
+				</Label>
+			</top>
+			<center>
+				<GridPane fx:id="sliderSection" BorderPane.alignment="CENTER">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<BorderPane prefHeight="200.0" prefWidth="200.0">
+							<left>
+								<Label styleClass="white-text" text="Population:" BorderPane.alignment="CENTER">
+									<padding>
+										<Insets left="20.0" right="10.0" />
+									</padding>
+								</Label>
+							</left>
+							<center>
+								<Slider fx:id="populationSlider" max="1000.0" min="10.0" minorTickCount="5" value="100.0" BorderPane.alignment="CENTER">
+									<padding>
+										<Insets right="20.0" />
+									</padding>
+								</Slider>
+							</center>
+							<top>
+								<Label fx:id="populationLabel" styleClass="white-text" text="100" BorderPane.alignment="CENTER">
+									<BorderPane.margin>
+										<Insets top="5.0" />
+									</BorderPane.margin>
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Label>
+							</top>
+						</BorderPane>
+						<BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+							<left>
+								<Label styleClass="white-text" text="Vaccination Rate: " BorderPane.alignment="CENTER">
+									<padding>
+										<Insets right="10.0" />
+									</padding>
+								</Label>
+							</left>
+							<center>
+								<Slider fx:id="vaxSlider" blockIncrement="1.0" majorTickUnit="5.0" minorTickCount="0" value="40.0" BorderPane.alignment="CENTER">
+									<padding>
+										<Insets right="20.0" />
+									</padding>
+								</Slider>
+							</center>
+							<top>
+								<Label fx:id="vaxLabel" styleClass="white-text" text="40%" BorderPane.alignment="CENTER">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Label>
+							</top>
+						</BorderPane>
+						<BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+							<left>
+								<Label styleClass="white-text" text="Transmission Rate:" BorderPane.alignment="CENTER">
+									<padding>
+										<Insets right="10.0" />
+									</padding>
+								</Label>
+							</left>
+							<center>
+								<Slider fx:id="transmissionSlider" blockIncrement="1.0" majorTickUnit="5.0" minorTickCount="0" value="30.0" BorderPane.alignment="CENTER">
+									<padding>
+										<Insets right="20.0" />
+									</padding>
+								</Slider>
+							</center>
+							<top>
+								<Label fx:id="transmissionLabel" styleClass="white-text" text="30%" BorderPane.alignment="CENTER">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Label>
+							</top>
+						</BorderPane>
+						<BorderPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
+							<left>
+								<Label styleClass="white-text" text="Recovery Period:" BorderPane.alignment="CENTER">
+									<padding>
+										<Insets right="10.0" />
+									</padding>
+								</Label>
+							</left>
+							<center>
+								<Slider fx:id="recoverySlider" blockIncrement="1.0" majorTickUnit="1.0" max="30.0" min="1.0" minorTickCount="0" value="7.0" BorderPane.alignment="CENTER">
+									<padding>
+										<Insets right="20.0" />
+									</padding>
+								</Slider>
+							</center>
+							<top>
+								<Label fx:id="recoveryLabel" styleClass="white-text" text="7 Days" BorderPane.alignment="CENTER">
+									<font>
+										<Font size="18.0" />
+									</font>
+								</Label>
+							</top>
+						</BorderPane>
+					</children>
+				</GridPane>
+			</center>
+			<bottom>
+				<GridPane fx:id="buttonSection" prefWidth="720.0" BorderPane.alignment="CENTER">
+					<columnConstraints>
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+						<ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+					</columnConstraints>
+					<rowConstraints>
+						<RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+					</rowConstraints>
+					<children>
+						<Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Start" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+							<padding>
+								<Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+							</padding>
+						</Button>
+						<Button mnemonicParsing="false" text="Pause" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+							<padding>
+								<Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+							</padding>
+						</Button>
+						<Button mnemonicParsing="false" text="Next Day" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+							<GridPane.margin>
+								<Insets />
+							</GridPane.margin>
+							<padding>
+								<Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+							</padding>
+						</Button>
+					</children>
+					<padding>
+						<Insets top="20.0" />
+					</padding>
+				</GridPane>
+			</bottom>
+		</BorderPane>
+	</children>
+</VBox>

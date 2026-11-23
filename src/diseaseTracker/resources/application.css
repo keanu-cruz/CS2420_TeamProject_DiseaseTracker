@@ -1,0 +1,17 @@
+.main-box {
+	-fx-background-color: #202325;
+}
+
+.white-text {
+	-fx-text-fill: white;
+}
+
+.stats-box {
+	-fx-background-color: #5C6269;
+	-fx-background-radius: 10px;
+}
+
+.stats {
+	-fx-background-color: #33383D;
+}
+
