@@ -54,7 +54,7 @@ public class DiseaseTrackerController {
 	    recoverySlider.valueProperty().addListener(
 		        (observable, oldValue, newValue) -> {
 		        		recoveryLabel.setText(
-		                String.valueOf(newValue.intValue() + "Days")
+		                String.valueOf(newValue.intValue() + " Days")
 		            );
 		        }
 		    );
