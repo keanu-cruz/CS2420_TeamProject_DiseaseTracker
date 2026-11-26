@@ -44,24 +44,5 @@ public class DiseaseSimulator {
 		}
 	}
 	
-	/**
-	 * given two people, this method attempts to transmit the infection between
-	 * two people
-	 * 
-	 * @param Person possibly responsible for transmitting the infection
-	 * @param Person possibly being infected
-	 */
-	public void attemptTransmission(Person person1, Person person2) {
-		//TODO - do we still want this?
-	}
-	
-	/**
-	 * traces the Person who infected a given Person.
-	 * 
-	 * @param the Person who has been infected
-	 */
-	public Person traceContact(int personID) {
-		//TODO - do we need to keep track of contact?
-		return null;
-	}
+
 }
