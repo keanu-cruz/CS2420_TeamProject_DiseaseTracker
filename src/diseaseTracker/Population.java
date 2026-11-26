@@ -27,6 +27,11 @@ public class Population {
 			Person p = new Person(i, false);
 			people.put(i, p);
 		}
+		
+		// initialize contactGraph with vertices correspondent to each personID
+		contactGraph = new Graph(popSize);
+		
+		
 		return people;
 	}
 	
@@ -37,7 +42,21 @@ public class Population {
 	 * @param person2
 	 */
 	public void addContact(Person person1, Person person2) {
-		//TODO - do we need to keep track of who had contact with who?
+		int pID1 = 0;
+		int pID2 = 0;
+		
+		for (int i : people.keys()) {
+			if (people.get(i) == person1) {
+				pID1 = i;
+			}
+			if (people.get(i) == person2) {
+				pID2 = i;
+			}
+		}
+		
+		contactGraph.addEdge(pID1, pID2);
+		
+		//TODO - possibly add disease transmission, but will probably add that in disease simulator
 	}
 	
 	/**
@@ -54,13 +73,20 @@ public class Population {
 	}
 	
 	/**
-	 * returns all people that a given Person has had contact with
+	 * returns all IDs of people that a given Person has had contact with
 	 * 
 	 * @param personID
 	 */
-	public Person[] getContacts(int id) {
-		//TODO - do we need to keep track of who had contact with who?
-		return null;
+	public int[] getContacts(int id) {
+		int[] contacts = new int[popSize];
+		
+		for (int i : contactGraph.adj(id)) {
+			int j = 0;
+			contacts[j] = i;
+			j++;
+		}
+		
+		return contacts;
 	}
 	
 	/**
@@ -69,6 +95,7 @@ public class Population {
 	 */
 	public Graph getGraph() {
 		return contactGraph;
+		
 	}
 	
 	/**
